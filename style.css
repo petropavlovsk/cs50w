@@ -1,4 +1,26 @@
 h2 {color: #588fe8;
     text-align: center;}
 
-p {font-family: times;}
+p {font-family: serif, times;
+font-size: 14px;
+font-weight: 200;}
+
+#grej {background-color: teal;
+    width: 100px;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+    border: 3px dashed blue;}
+
+table {border: 3px solid black;
+      border-collapse: collapse;
+      width: 50%;}
+
+th, td {border: 1px solid black;
+        padding: 5px;}
+
+th {background-color: lightgrey;}
+
+#top {color: darkgray;}
+
+.name {color: red;}

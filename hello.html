@@ -3,21 +3,17 @@
   <head>
     <title>My webpage</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-<<<<<<< HEAD
-    <div id="top">
-      <h2>Rubrik</h2>
-      <p>Hello World!</p>
-      <p>testar branching</p>
-      <p>My name is <span class="name">Petter</span>.
-    </div>
-=======
+    <h1></h1>
     <h2>Rubrik</h2>
     <p>Hello World!</p>
-   <p> tester branch</p>
-   <p>Addad i feature-branch</p>
->>>>>>> feature
+    <p> tester branch</p>
+    <p>Addad i feature-branch</p>
+    <header id="header">
+    <a href="#footer"> <p>Link to footer</p></a>
+    </header>
     <img width=30% src="http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg">
 
     <div id="grej">
@@ -33,9 +29,22 @@
     <p>An ordered list</p>
     <ol>
       <li>foo</li>
+        <ul>
+          <li>Foo</li>
+          <li>Bar</li>
+          <li>Baz</li>
+        </ul>
       <li>bar</li>
       <li>baz</li>
     </ol>
+
+<br>
+  <div id="before-example">
+    <a href="#">link 1</a><br>
+    <a href="#">link 2</a><br>
+    <a href="#">link 2</a><br>
+  </div>
+<br>
 
     <table>
       <tr><th>Name</th><th>Age</th><th>Number</th></tr>
@@ -43,11 +52,42 @@
       <tr><td>Name</td><td>Age</td><td>Number</td></tr>
       <tr><td>Name</td><td>Age</td><td>Number</td></tr>
     </table
+    <br><br>
 
-    <form>
-      <input type="text" placeholder="Full Name" name="name">
-      <button>Submit</button>
-    </form>
+    <div id="inputform">
+    <input name="name" type="text" placeholder="Name">
+    <input name="password" type="password" placeholder="Password">
+    <input name="age" type="number" placeholder="Age">
+    </div>
 
+    <br>
+
+    <div id="radio">
+      Favorite color
+      <input name="color" type="radio" value="red">red
+      <input name="color" type="radio" value="green">green
+      <input name="color" type="radio" value="blue">blue
+      <input name="color" type="radio" value="other">Other
+    </div>
+
+    <br>
+
+    <div id="datalists">
+      <input name="country" list="countries" placeholder="Country">
+      <datalist id="countries">
+        <option value="Albania">
+        <option value="Greece">
+        <option value="Spain">
+        <option value="Sweden">
+      </datalist>
+
+    </div>
+    <br>
+    <button>Submit</button>
+
+    <footer id="footer">
+    </p>Här nere har vi sidans sidfot.<br>
+    <a href="#header"> link to top</a></p>
+  </footer>
   </body>
 </html>

@@ -16,11 +16,61 @@ table {border: 3px solid black;
       border-collapse: collapse;
       width: 50%;}
 
-th, td {border: 1px solid black;
+th, td {border: 1px solid black; /*th och td påverkas*/
         padding: 5px;}
+
+ol > li {color: red;} /* first child påverkas men ingen annan*/
+
+ul li {font-style: italic} /* påverkar alla li som är decendants till ul */
+
+input[type=text] {background-color: red;} /*påverkar endast input-fält av typen name*/
+input[type=number] {background-color: yellow;}
 
 th {background-color: lightgrey;}
 
 #top {color: darkgray;}
 
 .name {color: red;}
+
+/* before och after påverkar eller lägger till något före eller efter ett element*/
+a::before {
+  content: "\21d2 Click here: ";
+  font-weight: bold;
+}
+
+a::after {content: " Or look bellow";
+}
+
+/* selection påverkar vad som händer med markerade element */
+p::selection {
+    color: red;
+    background-color: yellow;
+}
+
+/*responsiv design*/
+/*detta syns inte i print*/
+@media print {
+     .screen-only {
+               displey-property: none;
+     }
+}
+
+/*detta gör sidan lätt grå när den blir mindre än 800px*/
+ @media (min-width: 700px) {
+         body {
+           background-color: white;
+           font-family: Times;
+          }
+          h1::before {
+            content: "Welcome to my web page!";
+          }
+  }
+ @media (max-width: 699px) {
+         body {
+           background-color: lightgrey;
+           font-family: Verdana;
+          }
+          h1::before {
+            content: "Welcome!";
+          }
+  }

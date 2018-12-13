@@ -1,0 +1,156 @@
+/*VARIABLES*/
+$myRed: #ef4a2d;
+$myYellow: #f4ef49;
+$myTeal: teal;
+$myGreen: #3bdd61;
+$myBlue: #4286f4;
+
+h2 {color: #588fe8;
+    text-align: center;}
+
+p {font-family: serif, times;
+font-size: 14px;
+font-weight: 200;}
+
+#grej {background-color: teal;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    border: 3px dashed blue;}
+
+table {border: 3px solid black;
+      border-collapse: collapse;
+      width: 50%;}
+
+th, td {border: 1px solid black; /*th och td påverkas*/
+        padding: 5px;}
+
+ol > li {color: red;} /* first child påverkas men ingen annan*/
+
+ul li {font-style: italic} /* påverkar alla li som är decendants till ul */
+
+input[type=text] {background-color: $myRed;} /*påverkar endast input-fält av typen name*/
+input[type=number] {background-color: $myYellow;}
+
+th {background-color: lightgrey;}
+
+#top {color: darkgray;}
+
+.name {color: $myRed;}
+
+/* before och after påverkar eller lägger till något före eller efter ett element*/
+a::before {
+  content: "\21d2 Click here: ";
+  font-weight: bold;
+}
+
+a::after {content: " Or look bellow";
+}
+
+/* selection påverkar vad som händer med markerade element */
+p::selection {
+    color: $myRed;
+    background-color: $myYellow;
+}
+
+/*responsiv design*/
+/*detta syns inte i print*/
+@media print {
+     .screen-only {
+               displey-property: none;
+     }
+}
+
+/*detta gör sidan lätt grå när den blir mindre än 800px*/
+ @media (min-width: 700px) {
+         body {
+           background-color: white;
+           font-family: Times;
+          }
+          h1::before {
+            content: "Welcome to my web page!";
+          }
+  }
+ @media (max-width: 699px) {
+         body {
+           background-color: lightgrey;
+           font-family: Verdana;
+          }
+          h1::before {
+            content: "Welcome!";
+          }
+  }
+
+/*skapar textboxar som flyttar om sig beroende på hur stor sidan är*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container > div {
+    background-color: springgreen;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+/*skapar en grid som skalar om en av flera kolumner*/
+.grid {
+  background-color: $myGreen;
+  display: grid;
+  padding: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: 200px 200px auto;
+}
+.grid-item {
+  background-color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/*stylar rowsen i bootstrap-exemplet*/
+.row > div {
+  padding: 20px;
+  background-color: teal;
+  border: 2px solid black;
+}
+#bootstrap-exempel {
+  margin: 30px;
+}
+
+/*med scss kan man skriva såhär för att ange att endast p i en div ska påverkas*/
+div {
+    font-size: 18px;
+
+   p {
+        color: $myBlue;
+    }
+    ul {
+        color: $myGreen;
+    }
+}
+
+/*man kan också jobba med ärftlighet i scss*/
+
+%message {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+/*här anger man att hej ska ha allt som message har*/
+.hej {
+  @extend %message;
+  background-color: $myGreen;
+}
+
+.by {
+  @extend %message;
+  background-color: $myRed;
+}

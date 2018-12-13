@@ -3,6 +3,7 @@
   <head>
     <title>My webpage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -19,7 +20,7 @@
     <div id="grej">
       Hej
     </div>
-
+<h3>Lists</h3>
     <p>An unordered list</p>
     <ul>
       <li>foo</li>
@@ -39,6 +40,7 @@
     </ol>
 
 <br>
+<h3>Before and after med @media</h3>
   <div id="before-example">
     <a href="#">link 1</a><br>
     <a href="#">link 2</a><br>
@@ -46,46 +48,140 @@
   </div>
 <br>
 
-    <table>
-      <tr><th>Name</th><th>Age</th><th>Number</th></tr>
-      <tr><td>Name</td><td>Age</td><td>Number</td></tr>
-      <tr><td>Name</td><td>Age</td><td>Number</td></tr>
-      <tr><td>Name</td><td>Age</td><td>Number</td></tr>
-    </table
-    <br><br>
+<h3>Flexbox</h3>
+<div id="flexbox-exempel" class="container">
+  <div> A bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+  <div> B bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+  <div> C bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+  <div> D bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+  <div> E bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+  <div> F bld sadsad  njad aic  aosdn aousdn ois nfdn oub sc h</div>
+</div>
 
-    <div id="inputform">
-    <input name="name" type="text" placeholder="Name">
-    <input name="password" type="password" placeholder="Password">
-    <input name="age" type="number" placeholder="Age">
+<br>
+<h3>Grid</h3>
+<div id="grid-exempel" class="grid">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+  <div class="grid-item">10</div>
+  <div class="grid-item">11</div>
+  <div class="grid-item">12</div>
+</div>
+
+<br>
+<h3>Bootstrap</h3>
+
+<div id="bootstrap-exempel" class="row">
+  <div class="col-lg-3 col-sm-6">
+    This is a section.
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    This is a second section.
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    This is a third section.
+  </div>
+  <div class="col-lg-3 col-sm-6">
+    This is a forth section.
+  </div>
+</div>
+
+<br>
+
+<h4> Alert-messages in Bootstrap</h4>
+<div>
+  <div class="alert alert-primary" role="alert">
+    This is an alert message. News!
+  </div>
+  <div class="alert alert-success" role="alert">
+    This is an alert message. Good!
+  </div>
+  <div class="alert alert-danger" role="alert">
+    This is an alert message. Bad news!
+  </div>
+</div>
+<br>
+
+<h3>Nesting med Sass</h3>
+<p>Paragraph outside the div<p>
+<div>
+  <p>Paragraph inside the div.<p>
+  <ol>
+    <li>item one</li>
+    <li>item two</li>
+    <li>item two</li>
+  </ol>
+  <ul>
+    <li>item one</li>
+    <li>item two</li>
+    <li>item two</li>
+  </ul>
+</div>
+
+<h3>Ärftlighet med Sass<h3>
+  <div class="hej">
+    Hej!
+  </div>
+  <div class="by">
+    By!
+  </div>
+
+<br>
+
+<h3>Tabeller</h3>
+  <div id="table-exempel">
+      <table>
+        <tr><th>Name</th><th>Age</th><th>Number</th></tr>
+        <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+        <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+        <tr><td>Name</td><td>Age</td><td>Number</td></tr>
+      </table>
     </div>
+      <br><br>
 
-    <br>
+<h3> Forms </h3>
+      <div id="inputform">
+      <input name="name" type="text" placeholder="Name">
+      <input name="password" type="password" placeholder="Password">
+      <input name="age" type="number" placeholder="Age">
+      </div>
 
-    <div id="radio">
-      Favorite color
-      <input name="color" type="radio" value="red">red
-      <input name="color" type="radio" value="green">green
-      <input name="color" type="radio" value="blue">blue
-      <input name="color" type="radio" value="other">Other
-    </div>
+      <br>
 
-    <br>
+      <div id="radio">
+        Favorite color
+        <input name="color" type="radio" value="red">red
+        <input name="color" type="radio" value="green">green
+        <input name="color" type="radio" value="blue">blue
+        <input name="color" type="radio" value="other">Other
+      </div>
 
-    <div id="datalists">
-      <input name="country" list="countries" placeholder="Country">
-      <datalist id="countries">
-        <option value="Albania">
-        <option value="Greece">
-        <option value="Spain">
-        <option value="Sweden">
-      </datalist>
+      <br>
 
-    </div>
-    <br>
-    <button>Submit</button>
+      <div id="datalists">
+        <input name="country" list="countries" placeholder="Country">
+        <datalist id="countries">
+          <option value="Albania">
+          <option value="Greece">
+          <option value="Spain">
+          <option value="Sweden">
+        </datalist>
 
-    <footer id="footer">
+      </div>
+      <br>
+      <button>Submit</button>
+  </div>
+
+<br>
+
+  <footer id="footer">
     </p>Här nere har vi sidans sidfot.<br>
     <a href="#header"> link to top</a></p>
   </footer>
